@@ -1,0 +1,82 @@
+body { font-family: Georgia, serif; font-size: 150%; max-width: 800px; margin: auto; padding: 1em; word-spacing: 0.3em; }
+h1 { color: #333; }
+input#searchBox { width: 100%; padding: 0.5em; margin-bottom: 1em; }
+ul { list-style: none; padding: 0; }
+ul li { margin: 0.5em 0; }
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 1. Emphasized elements — raised slightly */
+em {
+  position: relative;
+  padding-left: 0.1em;
+  top: -0.3em;
+  font-style: normal;
+}
+
+/* 2. Deemphasized elements — lighter gray */
+.elis {
+  font-size: 0.75em;
+  color: #888;
+  font-style: italic;
+}
+
+/* 3. Short elements — rushing symbol ABOVE and animated */
+.short {
+  position: relative;
+  display: inline-block;
+}
+
+.group {
+  display: inline-block;
+  position: relative;
+  padding: 0 0.0em;  /* small horizontal padding */
+  margin: 0 0.05em;
+}
+
+.group::before {
+  content: "";
+  position: absolute;
+  top: -0.4em;          /* lift above letters */
+  left: 0;
+  right: 0;
+  height: 0.3em;        /* thickness of arc */
+  border-top: 1px solid black;
+  border-radius: 50% / 100%;  /* creates the gentle curve */
+
+}
+
+.short::before {
+  content: "»"; /* rushing symbol — can be ➤, ⏩, etc. */
+  position: absolute;
+  top: -0.2em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  color: inherit;
+  
+  /* Animation */
+  animation: rush 1s linear infinite;
+}
+
+@keyframes rush {
+  0% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-20%, -0.2em) scale(1.3);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(20%, 0) scale(1);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
