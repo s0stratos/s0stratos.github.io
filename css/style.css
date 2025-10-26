@@ -44,7 +44,7 @@ em {
 .group::before {
   content: "";
   position: absolute;
-  top: -0.4em;          /* lift above letters */
+  top: -0.7em;          /* lift above letters */
   left: 0;
   right: 0;
   height: 0.3em;        /* thickness of arc */
