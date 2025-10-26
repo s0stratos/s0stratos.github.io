@@ -87,14 +87,13 @@ em {
 
 table.img-box {
   border-spacing: 20px 50px;
-  line-height: 35px;
+  line-height: 50px;
 }
 
 td.img-box {
   border: 1000px solid #ccc;
   margin: 100px;
   padding-top: 100px;
-
 }
 
 
