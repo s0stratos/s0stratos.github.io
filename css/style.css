@@ -81,7 +81,23 @@ em {
   border-radius: 8px; /* optional, for rounded corners */
 }
 
+.img-box {
+  width: 200px;          /* box width */
+  height: 200px;         /* box height */
+  border: 2px solid #ccc; /* optional border */
+  border-radius: 8px;    /* optional rounded corners */
+  overflow: hidden;      /* hides overflowing image parts */
+  display: flex;         /* centers image inside */
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* optional background */
+}
 
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop image to fill box */
+}
 
 
 
