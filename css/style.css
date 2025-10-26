@@ -74,6 +74,12 @@ em {
   }
 }
 
+.normalized {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* crop to fill box without distortion */
+  border-radius: 8px; /* optional, for rounded corners */
+}
 
 
 
