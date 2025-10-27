@@ -1,0 +1,26 @@
+* {
+  margin: 5;
+  padding: 5;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+    margin-top: 15pt;
+}
+
+ul {
+    margin-top: 5pt;
+}
+
+li {
+    margin-left: 5pt;
+}
+
+.main {
+
+}
+
+.comp {
+  font-weight: bold;
+}
