@@ -4,62 +4,91 @@
   <meta charset="UTF-8">
   <title>Ludi Scaenici et Latinae Fabulae</title>
   <link rel="stylesheet" href="css/style.css">
+	<script rel="script" href="scripts/tabs.js"></script>
 </head>
 	<body>
 
-	<h1>Ludi Scaenici et Latinae Fabulae</h1>
+	<header>
+		<h1>Ludi et Fabulae Latinae</h1>
+		<nav>
+			<ul>
+				<button class="tab-button active" onclick="openTab(event, 'Fabulae')">Fabulae</button>
+				<button class="tab-button" onclick="openTab(event, 'Ludi')">Ludi</button>
+				<button class="tab-button" onclick="openTab(event, 'Ranatica')">Ranatica</button>
+				<button class="tab-button" onclick="openTab(event, 'Latinitas')">Latinitas</button>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<div id="Latinitas" class="tab-content">
+				<div>join us on discord: <a href="https://discord.gg/HTw8G8Rg">here</a></div>
+			</div>
+			<div id="Ranatica" class="tab-content">
+				<li><a href="ranatica/ranatica.html">Ranatica</a></li>
+				<li><a href="ranatica/studies.html">Lexical Studies</a></li>
+			</div>
+			<div id="Ludi" class="tab-content">
+				<li><a href="ludi/osetaures.html">Os et Aures Exercere</a></li>
+			</div>
+			<div id="Fabulae" class="tab-content active">
+				<table width="100%">
+					<tr>
+						<td valign="top">
+							<ul>
+								<li><a href="fabulae/asinaria.html">Plauti Asinaria</a></li>
+								<li><a href="fabulae/curculio.html">Plauti Curculio</a></li>
+								<li><a href="fabulae/mercator.html">Plauti Mercator</a></li>
+								<li><a href="fabulae/milesgloriosus.html">Plauti Miles Gloriosus</a></li>
+								<li><a href="fabulae/cistellaria.html">Plauti Cistellaria</a></li>
+								<li><a href="fabulae/ampitruo.html">Plauti Ampitruo</a></li>
+								<li><a href="fabulae/aulularia.html">Plauti Aulularia</a></li>
+								<li><a href="fabulae/mostellaria.html">Plauti Mostellaria</a></li>
+								<li><a href="fabulae/epidicus.html">Plauti Epidicus</a></li>
+								<li><a href="fabulae/menaecmi.html">Plauti Menaecmi</a></li>
+								<li><a href="fabulae/captiui.html">Plauti Captiui</a></li>
+								<li><a href="fabulae/rudens.html">Plauti Rudens</a></li>
+								<li><a href="fabulae/sticus.html">Plauti Sticus</a></li>
+								<li><a href="fabulae/pseudolus.html">Plauti Pseudolus</a></li>
+								<li><a href="fabulae/trinummus.html">Plauti Trinummus</a></li>
+								<li><a href="fabulae/truculentus.html">Plauti Truculentus</a></li>
+								<li><a href="fabulae/poenulus.html">Plauti Poenulus</a></li>
+								<li><a href="fabulae/casina.html">Plauti Casina</a></li>
+								<li><a href="fabulae/uidularia.html">Plauti Uidularia</a></li>
+							</ul>
+						</td>
+						<td valign="top">
+							<ul>
+								<li><a href="fabulae/andria.html">Terenti Andria</a></li>
+								<li><a href="fabulae/hecura.html">Terenti Hecura</a></li>
+								<li><a href="fabulae/heautontimorumenos.html">Terenti Heautontimorumenos</a></li>
+								<li><a href="fabulae/eunucus.html">Terenti Eunucus</a></li>
+								<li><a href="fabulae/pormio.html">Terenti Pormio</a></li>
+								<li><a href="fabulae/adelpoe.html">Terenti Adelpoe</a></li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</main>
 
-	<h2>Latinitas</h2>
-	<div>join us on discord: <a href="https://discord.gg/HTw8G8Rg">here</a></div>
+	<script>
+		function openTab(evt, tabName) {
+          // Hide all tab contents
+          const tabContents = document.querySelectorAll('.tab-content');
+          tabContents.forEach(tc => tc.classList.remove('active'));
 
-	<h2>Ranatica</h2>
-	<ul>
-		<li><a href="ranatica/ranatica.html">Ranatica</a></li>
-		<li><a href="ranatica/studies.html">Lexical Studies</a></li>
-	</ul>
+          // Remove active class from all buttons
+          const tabButtons = document.querySelectorAll('.tab-button');
+          tabButtons.forEach(btn => btn.classList.remove('active'));
 
-	<h2>Ludi</h2>
-	<ul>
-		<li><a href="ludi/osetaures.html">Os et Aures Exercere</a></li>
-	</ul>
-
-	<h2>Fabulae</h2>
-	<table width="100%">
-		<tr>
-			<td valign="top">
-				<ul>
-					<li><a href="fabulae/asinaria.html">Plauti Asinaria</a></li>
-					<li><a href="fabulae/curculio.html">Plauti Curculio</a></li>
-					<li><a href="fabulae/mercator.html">Plauti Mercator</a></li>
-					<li><a href="fabulae/milesgloriosus.html">Plauti Miles Gloriosus</a></li>
-					<li><a href="fabulae/cistellaria.html">Plauti Cistellaria</a></li>
-					<li><a href="fabulae/ampitruo.html">Plauti Ampitruo</a></li>
-					<li><a href="fabulae/aulularia.html">Plauti Aulularia</a></li>
-					<li><a href="fabulae/mostellaria.html">Plauti Mostellaria</a></li>
-					<li><a href="fabulae/epidicus.html">Plauti Epidicus</a></li>
-					<li><a href="fabulae/menaecmi.html">Plauti Menaecmi</a></li>
-					<li><a href="fabulae/captiui.html">Plauti Captiui</a></li>
-					<li><a href="fabulae/rudens.html">Plauti Rudens</a></li>
-					<li><a href="fabulae/sticus.html">Plauti Sticus</a></li>
-					<li><a href="fabulae/pseudolus.html">Plauti Pseudolus</a></li>
-					<li><a href="fabulae/trinummus.html">Plauti Trinummus</a></li>
-					<li><a href="fabulae/truculentus.html">Plauti Truculentus</a></li>
-					<li><a href="fabulae/poenulus.html">Plauti Poenulus</a></li>
-					<li><a href="fabulae/casina.html">Plauti Casina</a></li>
-					<li><a href="fabulae/uidularia.html">Plauti Uidularia</a></li>
-			  	</ul>
-			</td>
-			<td valign="top">
-			  	<ul>
-					<li><a href="fabulae/andria.html">Terenti Andria</a></li>
-					<li><a href="fabulae/hecura.html">Terenti Hecura</a></li>
-					<li><a href="fabulae/heautontimorumenos.html">Terenti Heautontimorumenos</a></li>
-					<li><a href="fabulae/eunucus.html">Terenti Eunucus</a></li>
-					<li><a href="fabulae/pormio.html">Terenti Pormio</a></li>
-					<li><a href="fabulae/adelpoe.html">Terenti Adelpoe</a></li>
-		  		</ul>
-		  	</td>
-		</tr>
-	</table>
+          // Show current tab and highlight button
+          document.getElementById(tabName).classList.add('active');
+          evt.currentTarget.classList.add('active');
+        }
+	</script>
 	</body>
+
+
 </html>
