@@ -1,0 +1,214 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+html {
+  overflow-y: scroll; /* Always reserve scrollbar space */
+}
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- HEADER --- */
+    header {
+      position: relative;
+      height: 250px;
+      background-size: 100% 100%;
+      background: url("../images/Footer.png")
+        center/cover repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+              center/cover repeat;
+            color: #5C0016;
+            background-size: 100% 100%;
+            text-align: center;
+            padding: 2em 1em;
+            position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0);
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 2.5rem;
+        padding-top: 10px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    /* --- NAV --- */
+    nav {
+     max-width: 1000px;      /* same as main content */
+      margin: 0 auto;        /* center horizontally */
+       background: url("../images/Footer.png")
+         center/cover repeat;
+      padding: 0.75em 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1em;
+      font-weight: bold;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      color: #5C0016;
+    }
+
+    nav a.active,
+    nav a:focus,
+    nav a:hover {
+      background: #0077cc;
+      color: white;
+    }
+
+    /* --- CONTENT AREA --- */
+    main {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 0 1em;
+      flex: 1; /* take up remaining space between header and footer */
+    }
+
+    section {
+      display: none;
+      animation: fadein 0.4s ease;
+    }
+
+    section:target {
+      display: block;
+    }
+
+    /* Default visible section (home) */
+    #home {
+      display: block;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background: url("../images/Footer.png")
+        center/cover repeat;
+      color: white;
+      background-size: 100% 100%;
+      text-align: center;
+      padding: 2em 1em;
+      position: relative;
+    }
+
+    footer::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0);
+    }
+
+    footer p {
+      position: relative;
+      z-index: 1;
+    }
+
+.wide-table {
+  width: 100%;
+  max-width: 800px;     /* same as main content */
+  margin-left: 7%;
+  border-collapse: collapse; /* merge borders */
+  table-layout: fixed;       /* equal column widths */
+}
+
+/* Header cells */
+.wide-table th {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  background-color: #f2f2f2;
+  font-weight: 600;
+  vertical-align: top;       /* align text top */
+}
+
+/* Body cells */
+.wide-table td {
+  padding: 0.75rem;
+  vertical-align: top;       /* top alignment */
+  word-wrap: break-word;     /* wrap long text */
+  text-align: left;
+}
+
+/* Optional: make header bold and sticky */
+.wide-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+
+
+
+        /* Page wrapper */
+        .page-wrapper {
+          position: relative;
+          min-height: 100vh;
+        }
+
+        /* Side images */
+        .side-image {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 80px;             /* must have width */
+          background-size: 100%; /* stretch vertically only */
+          background-repeat: repeat-y;
+          background-position: center top;
+          z-index: 1;
+        }
+
+        .side-image.left {
+          left: 0;
+          background-image: url('../images/column.png');
+        }
+
+        .side-image.right {
+          right: 0;
+          background-image: url('../images/column.png');
+        }
+
+        /* Content wrapper in front */
+        .content-wrapper {
+          position: relative;
+          z-index: 2;
+          max-width: 900px;
+          margin: 0 auto;
+          background: rgba(255,255,255,0.95);
+          padding: 2rem;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }

@@ -3,38 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Ludi Scaenici et Latinae Fabulae</title>
-  <link rel="stylesheet" href="css/style.css">
-	<script rel="script" href="scripts/tabs.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 	<body>
 
 	<header>
 		<h1>Ludi et Fabulae Latinae</h1>
-		<nav>
-			<ul>
-				<button class="tab-button active" onclick="openTab(event, 'Fabulae')">Fabulae</button>
-				<button class="tab-button" onclick="openTab(event, 'Ludi')">Ludi</button>
-				<button class="tab-button" onclick="openTab(event, 'Ranatica')">Ranatica</button>
-				<button class="tab-button" onclick="openTab(event, 'Latinitas')">Latinitas</button>
-			</ul>
-		</nav>
 	</header>
+	<div class="page-wrapper">
+		<div class="side-image left"></div>
+		<div class="side-image right"></div>
+		<nav>
+			<a href="#fabulae">Fabulae</a>
+			<a href="#ludi">Ludi</a>
+			<a href="#ranatica">Ranatica</a>
+			<a href="#latinitas">Latinitas</a>
+		</nav>
+	<div class="content-wrapper">
+
+
 	<main>
-		<section>
-			<div id="Latinitas" class="tab-content">
+
+		<section id="latinitas">
 				<div>join us on discord: <a href="https://discord.gg/HTw8G8Rg">here</a></div>
-			</div>
-			<div id="Ranatica" class="tab-content">
+		</section>
+
+			<section id="ranatica">
 				<li><a href="ranatica/ranatica.html">Ranatica</a></li>
 				<li><a href="ranatica/studies.html">Lexical Studies</a></li>
-			</div>
-			<div id="Ludi" class="tab-content">
+			</section>
+			<section id="ludi">
 				<li><a href="ludi/osetaures.html">Os et Aures Exercere</a></li>
-			</div>
-			<div id="Fabulae" class="tab-content active">
-				<table width="100%">
+			</section>
+			<section id="fabulae">
+				<table class="wide-table">
 					<tr>
-						<td valign="top">
+						<td>
 							<ul>
 								<li><a href="fabulae/asinaria.html">Plauti Asinaria</a></li>
 								<li><a href="fabulae/curculio.html">Plauti Curculio</a></li>
@@ -46,6 +50,10 @@
 								<li><a href="fabulae/mostellaria.html">Plauti Mostellaria</a></li>
 								<li><a href="fabulae/epidicus.html">Plauti Epidicus</a></li>
 								<li><a href="fabulae/menaecmi.html">Plauti Menaecmi</a></li>
+							</ul>
+						</td>
+					<td>
+							<ul>
 								<li><a href="fabulae/captiui.html">Plauti Captiui</a></li>
 								<li><a href="fabulae/rudens.html">Plauti Rudens</a></li>
 								<li><a href="fabulae/sticus.html">Plauti Sticus</a></li>
@@ -58,7 +66,7 @@
 								<li><a href="fabulae/boeotia.html">Plauti Boeotia</a></li>
 							</ul>
 						</td>
-						<td valign="top">
+						<td>
 							<ul>
 								<li><a href="fabulae/andria.html">Terenti Andria</a></li>
 								<li><a href="fabulae/hecura.html">Terenti Hecura</a></li>
@@ -70,26 +78,14 @@
 						</td>
 					</tr>
 				</table>
-			</div>
-		</section>
+			</section>
 	</main>
 
-	<script>
-		function openTab(evt, tabName) {
-          // Hide all tab contents
-          const tabContents = document.querySelectorAll('.tab-content');
-          tabContents.forEach(tc => tc.classList.remove('active'));
+	</div>
+	</div>
+<footer>
 
-          // Remove active class from all buttons
-          const tabButtons = document.querySelectorAll('.tab-button');
-          tabButtons.forEach(btn => btn.classList.remove('active'));
+</footer>
 
-          // Show current tab and highlight button
-          document.getElementById(tabName).classList.add('active');
-          evt.currentTarget.classList.add('active');
-        }
-	</script>
 	</body>
-
-
 </html>
