@@ -74,6 +74,10 @@ em {
   animation: rush 1s linear infinite;
 }
 
+.short, .group {
+  font-size: 1em; /* or 16px if you prefer */
+}
+
 @keyframes rush {
   0% {
     transform: translate(-50%, 0) scale(1);
