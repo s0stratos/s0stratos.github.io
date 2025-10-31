@@ -45,7 +45,7 @@ em {
 .group {
   display: inline-block;
   position: relative;
-  padding: 0 0.0em;  /* small horizontal padding */
+  padding: 0 0.01em;  /* small horizontal padding */
   margin: 0 0.05em;
 }
 
@@ -66,8 +66,8 @@ em {
   position: absolute;
   top: -0.5em;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.8em;
+  transform: translateX(-50%) scale(0.8);
+  font-size: 1em;
   color: inherit;
   
   /* Animation */
