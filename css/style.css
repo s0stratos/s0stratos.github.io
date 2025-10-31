@@ -1,4 +1,13 @@
 
+pre {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Highlight tabs with a subtle background using ::before */
+pre span.tab {
+    display: inline-block;
+    width: 2em;
+}
 
 .script {
   font-size: 150%;
