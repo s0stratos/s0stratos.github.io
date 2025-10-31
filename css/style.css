@@ -40,13 +40,15 @@ em {
 .short {
   position: relative;
   display: inline-block;
+  font-size: 15px;
 }
 
 .group {
   display: inline-block;
   position: relative;
-  padding: 0 0.0em;  /* small horizontal padding */
+  padding: 0 0.01em;  /* small horizontal padding */
   margin: 0 0.05em;
+  font-size: 15px;
 }
 
 .group::before {
@@ -66,12 +68,16 @@ em {
   position: absolute;
   top: -0.5em;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.8em;
+  transform: translateX(-50%) scale(1);
+  font-size: 1em;
   color: inherit;
   
   /* Animation */
   animation: rush 1s linear infinite;
+}
+
+.short, .group {
+  font-size: 1em; /* or 16px if you prefer */
 }
 
 @keyframes rush {
