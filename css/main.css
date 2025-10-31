@@ -217,7 +217,7 @@ h3 {
         }
 
         @media (max-width: 600px) {
-          .side-image {
+          div.side-image {
             display: none;
           }
         }
