@@ -41,8 +41,8 @@ em {
   font-size: 0.5em;
   color: #888;
   font-style: italic;
-writing-mode: vertical-rl;
-text-orientation: upright;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 
