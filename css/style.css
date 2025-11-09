@@ -34,13 +34,27 @@ em {
   font-size: 0.75em;
   color: #888;
   font-style: italic;
+
 }
+
+.part {
+  font-size: 0.5em;
+  color: #888;
+  font-style: italic;
+writing-mode: vertical-rl;
+text-orientation: upright;
+}
+
 
 /* 3. Short elements — rushing symbol ABOVE and animated */
 .short {
   position: relative;
   display: inline-block;
   font-size: 15px;
+}
+
+.half {
+    padding-left: 10em;
 }
 
 .group {
