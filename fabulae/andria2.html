@@ -160,6 +160,8 @@
         .paren { color: #1a1a8e; font-weight: bolder; }
         .tilde { color: #8a008a; font-weight: bolder; }
         .star { color: #8a0000; font: italic; }
+        .paren2 { color: #8a4000; }
+        .curly2 { color: #1a1a8e; }
 
         .sync-indicator {
           position: fixed;
@@ -2290,6 +2292,17 @@
       return escaped;
     }
 
+    function colorizeMeter(text) {
+      let escaped = escapeThen(text);
+      escaped = escaped
+        .replace(/\(([^)]+)\)/g, '<span class="paren2">($1)</span>')
+        .replace(/\{([^}]+)\}/g, '<span class="curly2">{$1}</span>')
+        .replace(/#/g, '<span style="color:#8a008a">#</span>')
+        .replace(/\|\|/g, '<span style="color:#8a008a">||</span>')
+        .replace(/\*([^*]+)\*/g, '<span class="star">*$1*</span>');
+      return escaped;
+    }
+
     let activeIndex = -1;
 
     function buildLines(containerId, lines, isText2) {
@@ -2309,7 +2322,7 @@
         if (isText2) {
           content.innerHTML = colorizeSyntax(text);
         } else {
-          content.textContent = text;
+          content.innerHTML = colorizeMeter(text);
         }
 
         row.appendChild(num);
